@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silid-AI</title>
     <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
     
@@ -39,23 +40,24 @@
                     <p>1. I need to find the way to a shop that a friend has recommended. I would:</p>
                     
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" name="question-1" value="kinesthetic">
                         <label for="">Find out where the shop is in relation to somewhere I know.</label>
                     </div>
                     
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" name="question-1" value="aural">
                         <label for="">Ask my friend to tell me the directions.</label>
                     </div>
                     
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" name="question-1" value="read">
                         <label for="">Write down the street directions I need to remember.</label>
                     </div>
                         
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" name="question-1" value="visual">
                         <label for="">Use a map.</label>
+                        
                     </div>
                 </div>
 
@@ -399,15 +401,14 @@
                         <label for="">Watching a video of a person assembling a similar table.</label>
                     </div>
                 </div>
-                <div class="button-container">
-                    <button type="submit">
+                <div class="submit-container">
+                    <button type="submit" class="submit-button">
                         <div>Submit</div>
                     </button>
                     
                 </div>
             </form>
             
-            <div class="question1"></div>
         </section> 
         
 
