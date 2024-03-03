@@ -12,6 +12,13 @@ const form = document.querySelector('form');
 console.log('submit button')
 console.log(submitBtn)
 
+// count for each
+let visual = 0;
+let aural = 0;
+let read = 0;
+let kinesthetic = 0;
+
+let result = '';
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -20,13 +27,38 @@ form.addEventListener('submit', function(event){
     console.log(inputArr)
     
 
-    console.log('input arr for each below ')
-    
-    inputArr.forEach(element=> {
+    console.log('COUNT --------------') 
+    inputArr.forEach(element => {
         if (element.checked) {
             console.log(element.value)
+            
+            switch (element.value) {
+                case 'visual':
+                    visual += 1;
+                    break
+                case 'aural':
+                    aural += 1;
+                    break
+                case 'read':
+                    read += 1;
+                    break
+                case 'kinesthetic':
+                    kinesthetic += 1;
+                    break
+            }
         }
     })
+
+    window.location = 'submitted-page.html';
+    // inputArr.forEach(element => {
+    //     if (element.checked) {
+    //         element.checked = false;
+    //     }
+    // })
+    console.log('visual count: ' + visual)
+    console.log('aural count: ' + aural)
+    console.log('read count: ' + read)
+    console.log('kinesthetic count: ' + kinesthetic)
     
     
 })

@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    background-color: white;
+    background-color: rgb(229, 228, 228);
 }
                                     
 /* main container */
@@ -24,9 +24,9 @@ body {
     width: 95%;
     
     /* padding: 50px; */
-    /* border-radius: 10px; */
     row-gap: 20px;
     background-color: #369679;
+    
     /* border-top: 10px solid #5ABB48; */
     /* border: 1px solid grey; */
     /*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
@@ -169,13 +169,15 @@ form>div>div {
  
 .submit-button {
     width: 200px;
-    height: 50px;
+    height: 55px;
     background-color: #369679;
     color: white;
     border: none;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 5px;
+    border-bottom: 5px solid #2a7961;
+    border-right: 3px solid #2a7961;
+    border-left : 3px solid #2a7961;
 }
 
 .submit-button:hover {
@@ -185,4 +187,18 @@ form>div>div {
 .submit-container {
     display: flex;
     align-items: center;
+}
+
+/* submitted text container */
+.submitted-text-container {
+    color: white;
+    font-size: 2rem;
+    padding: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.submitted-text-container img {
+    transform: scale(1.1);
+    
 }
