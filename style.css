@@ -1,3 +1,11 @@
+:root {
+    --green-theme: #369679;
+    --green-darker-theme: #2a755e;
+    --grey-theme: #3e3f42;
+
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -14,12 +22,30 @@ body {
     padding: 25px;
     background-color: rgb(229, 228, 228);
 }
+/* text classes */
+.large-heading {
+    font-weight: 600;
+    font-size: 3rem;
+    color: white;
+    
+}
+
+.thin-text {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.red-text {
+    font-weight: 600;
+    color: #e06156;
+}
                                     
 /* main container */
 
-
 .main-container {
     display: flex;
+    
     flex-direction: column;
     width: 95%;
     
@@ -39,19 +65,11 @@ body {
 .ins-container {
     padding:40px 50px;
     font-size: 2rem;
-    line-height: 1.2;
-    
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
-.ins-container p {
-    color: white;
-    font-weight: 500;
-}
-
-.ins-container p span {
-    font-weight: 600;
-    color: #e06156;
-}
 
 /* question container */
 
@@ -67,13 +85,13 @@ body {
     position: relative;
 }
 .image-container img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .image-container {
-    
     height: 300px;
     width: 100%;
     
@@ -119,30 +137,30 @@ background: rgb(78, 198, 162);
 
 }
 
-/* form*/
+/* #survey*/
 
-form > * {
+#survey > * {
     color: white;
 }
 
-form {
+#survey {
     display: flex;
     flex-direction: column;
     row-gap: 60px;
     padding: 0px 50px;
 }
-form > div {
+#survey > div {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     
     /* background-color: rgb(248, 248, 244); */
-    border-radius: 5px;
+    
     padding: 0px 50px;
     
 }
 
-form > div > p {
+#survey > div > p {
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 500;
@@ -151,11 +169,11 @@ form > div > p {
 
 /* radio containers */
 
-form> div> div> label {
+#survey> div> div> label {
     font-size: 1.5rem;
     font-weight: 300;
 }
-form>div>div {
+#survey>div>div {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
@@ -165,26 +183,28 @@ form>div>div {
      transform: scale(2.5);
  }
 
- /* submit button */
+ /* submitbutton */
  
-.submit-button {
+.submit-button,
+.register-btn{
     width: 200px;
     height: 55px;
-    background-color: #369679;
+    background-color: var(--green-theme);
     color: white;
     border: none;
     font-size: 20px;
     font-weight: 500;
-    border-bottom: 5px solid #2a7961;
-    border-right: 3px solid #2a7961;
-    border-left : 3px solid #2a7961;
+    border-bottom: 5px solid var(--green-darker-theme);
+    border-right: 3px solid var(--green-darker-theme);
+    border-left : 3px solid var(--green-darker-theme);
 }
 
 .submit-button:hover {
     background-color: #2a7961;
 }
 
-.submit-container {
+.submit-container,
+.register-btn-portion {
     display: flex;
     align-items: center;
 }
@@ -196,7 +216,7 @@ form>div>div {
     padding: 50px;
     font-weight: 500;
     text-align: center;
-    display: none;
+    display:none;
 }
 
 
@@ -204,3 +224,79 @@ form>div>div {
     transform: scale(1.1);
     
 }
+
+/* registration */
+.reg-container {
+    background-color: var(--grey-theme);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+}
+
+
+.reg-container div {
+    
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+#registration div {
+    flex: 1
+}
+
+#registration {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    row-gap: 20px;
+}
+
+#registration label {
+    transition: all 0.3s;
+    position: absolute;
+    font-size: 12px;
+    top: 6px;
+    left: 12px;
+    color: transparent  
+}
+
+#registration input::placeholder {
+
+}
+
+#registration input:focus::placeholder {
+    transition: all 0.1s;
+    color: transparent
+}
+
+#registration input:focus+label {
+    
+    color: white;
+}
+
+#registration input:focus {
+    outline-width: 0;
+}
+
+#registration input {
+    color: white;
+    background-color: #4a4b4f;
+    border: none;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    font-size: 1.5rem;
+    flex: 1;
+    padding: 20px 10px 10px 10px;
+}
+
+#registration input:focus {
+    border: 2px solid rgb(102, 101, 101);
+    background-color: #5f6166
+}
+

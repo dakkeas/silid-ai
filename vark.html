@@ -12,10 +12,12 @@
         rel="stylesheet">
     <!-- <script src="main.js" defer></script> -->
     <!-- <script src="main.js" defer></script> -->
+    <!-- <script defer src="register.js" ></script> -->
+    <script defer type="module" src="main.js" ></script>
 </head>
 <body>
-    
     <div class="main-container">
+        
         <div class="logo-container">
             <div class="image-container img-gradient">
                 <img src="img/vr-kids.jpg" alt="">
@@ -26,9 +28,9 @@
 
 
         <div class="ins-container">
-            <p>
+            <p class="thin-text">
             Choose the answer which best explains your preference.
-            Please check more than one if a single answer does not match your perception. <br> <br> Leave <span>blank</span> any question
+            Please check more than one if a single answer does not match your perception. <br> <br> Leave <span class="red-text">blank</span> any question
             that does not apply.
             </p>
 
@@ -36,7 +38,7 @@
         </div>
 
         <section class="q-container">
-            <form action="">
+            <form action="" id="survey">
                 <div class="question-container1">
                     <p>1. I need to find the way to a shop that a friend has recommended. I would:</p>
                     
@@ -411,15 +413,14 @@
             </form>
             
         </section> 
-    <div class="submitted-text-container">
-        <img src="img/spaceman.png" alt="">
-        <p>Thank you for submitting your answers. Our machine learning model will now analyze your responses and predict the
-            suitable learning style for you. </p>
-    </div>
+        <div class="submitted-text-container">
+            <img src="img/spaceman.png" alt="">
+            <p>Thank you for submitting your answers. Our machine learning model will now analyze your responses and predict the
+                suitable learning style for you. </p>
+        </div>
         
-        
-    </div> 
+
 
     
+    </div> 
 </body>
-<script type="module" src="main.js"></script>
