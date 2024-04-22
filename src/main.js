@@ -1,6 +1,7 @@
 
 console.log('firebase setup..............')
 
+
 // Add Firebase products that you want to use
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js';
 import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js';
@@ -231,4 +232,21 @@ if (document.querySelector('.reg-container')) {
     })
 
 
+}
+
+
+if (document.querySelector('.front-img-container')) {
+    
+
+    
+    const homePageLoginBtn = document.querySelector('.header-login-container button');
+    
+    homePageLoginBtn.addEventListener('click', () => {
+        console.log('hey') 
+        window.location = ('login.html')
+
+    }) 
+   
+    
+    
 }
