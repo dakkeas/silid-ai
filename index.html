@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Done Submitting</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="main.js" defer></script>
+    <script type="module" src="./src/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,7 +14,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="survey">
 
     <div class="main-container">
         <div class="logo-container">
@@ -36,23 +36,23 @@
             <form action="" id="registration">
 
                 <div class="fname-container">
-                    <input type="text" name="user-fname" placeholder="First Name">
+                    <input required type="text" name="user-fname" placeholder="First Name">
                     <label for="user-fname">First Name</label>
                 </div>
                 <div class="lname-container">
-                    <input type="text" name="user-lname" placeholder="Last Name">
+                    <input required type="text" name="user-lname" placeholder="Last Name">
                     <label for="user-lname">Last Name</label>
                 </div>
                 <div class="email-container">
-                    <input type="email" name="user-email" placeholder="Email">
+                    <input required type="email" name="user-email" placeholder="Email">
                     <label for="user-phone-number">Email</label>
                 </div>
                 <div class="init-pass-container">
-                    <input type="password" name="initial-password" placeholder="Password">
+                    <input required type="password" name="initial-password" placeholder="Password">
                     <label for="initial-password">Password</label>
                 </div>
                 <div class="conf-pass-container">
-                    <input type="password" name="confirm-password" placeholder="Confirm Password">
+                    <input required type="password" name="confirm-password" placeholder="Confirm Password">
                     <label for="confirm-password">Confirm Password</Param></label>
                 </div>
                 <label for="strand">Choose a car:</label>

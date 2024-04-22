@@ -10,11 +10,11 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    /* border: 1px solid grey; */
     font-family: "Poppins", sans-serif;
+    /* border: 1px solid green;  */
 }
 
-body {
+body .survey {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,5 +297,174 @@ background: rgb(78, 198, 162);
 #registration input:focus {
     border: 2px solid rgb(102, 101, 101);
     background-color: #5f6166
+}
+
+/* HOME PAGE */
+
+.front-img-container {
+    background-image: url(img/vr-kids-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #5bc4a4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative
+}
+
+.front-header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    
+    padding: 20px;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 15px;
+    align-items: center;
+}
+
+li {
+    
+    font-size: large;
+    color: white;
+}
+
+.header-interact-corner {
+    display: flex;
+    column-gap: 40px;
+}
+
+.front-text-container {
+    display: flex;
+    height: 400px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+
+
+.front-text-container > *{
+    position: relative; 
+    left: 200px;
+    
+    color: white;
+    align-self: flex-start;
+    
+}
+
+.front-card-container {
+    top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+.header-logo {
+    color: white;
+}
+
+
+.header-button-temp {
+    background: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    
+}
+
+
+.login-signin-container {
+    display: flex;
+    column-gap: 10px;
+}
+
+
+.card-template {
+    column-gap: 20px;
+    display: flex;
+    
+    background-color: rgb(252, 252, 252);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-template img {
+    
+    height: 40px;
+    width: 40px;
+}
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    color: rgb(102, 102, 102)
+}
+
+.card-text-container p {
+    font-size: 12px;
+}
+
+.home {
+
+   background-color: rgb(226, 226, 226); 
+}
+.main-body {
+    
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-body > * {
+   width: 80%; 
+   align-self: center;
+}
+.img-copyright {
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+
+}
+
+.colored-button-template {
+    padding: 10px 20px;
+    border-radius: 5px;
+     
+    border: none;
+    color: white;
+    background-color: #e06156;
+    font-weight: bold;
+}
+
+
+
+.body-header-text {
+    font-size: large;
+    font-weight: bold;
+
 }
 
