@@ -13,7 +13,7 @@ const firebaseConfig = {
   authDomain: "silid-ai-939a6.firebaseapp.com",
   databaseURL: "https://silid-ai-939a6-default-rtdb.firebaseio.com",
   projectId: "silid-ai-939a6",
-  storageBucket: "silid-ai-939a6.appspot.com",
+  storageBucket: "silid-ai-939a6.appspot.com",  
   messagingSenderId: "831704041330",
   appId: "1:831704041330:web:548f66b512c763ee68ffeb",
   measurementId: "G-YL22G17R5M"
@@ -233,17 +233,65 @@ if (document.querySelector('.reg-container')) {
 
 
 }
+// NEW
+// 
+// modal
+const modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+// span.onclick = function () {
+//     modal.style.display = "none";
+// }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+if (document.querySelector('.login-body')) {
+    console.log('###########LOGIN PAGE#############')
+
+    const loginPageLoginBtn = document.querySelector('.login-button button');
+    console.log(loginPageLoginBtn)
+    loginPageLoginBtn.onclick = function() {
+        console.log('login button clicked!')
+        modal.style.display = "block";
+    }
+
+}
 
 if (document.querySelector('.front-img-container')) {
-    
-
-    
+    // home page
+    console.log('###########HOME PAGE#############')
     const homePageLoginBtn = document.querySelector('.header-login-container button');
+    const homePageSignUpBtn= document.querySelector('.front-signin-container button');
     
     homePageLoginBtn.addEventListener('click', () => {
         console.log('hey') 
         window.location = ('login.html')
+
+    }) 
+
+    homePageSignUpBtn.addEventListener('click', () => {
+        console.log('hey') 
+        window.location = ('signup.html')
 
     }) 
    
