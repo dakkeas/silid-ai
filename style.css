@@ -14,8 +14,9 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    /* border: 1px solid rgb(183, 181, 181); */
+    border: 1px solid rgb(183, 181, 181);
     padding: 0px;
+
     font-family: "Rubik", sans-serif;
 }
 
@@ -694,7 +695,8 @@ footer {
 /* LOGIN PAGE */
 
 .main-login-container,
-.main-signup-container {
+.main-signup-container,
+.login-modal-content{
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
@@ -708,8 +710,9 @@ footer {
 
 
 .main-login-container h1,
-.main-signup-container h1 {
-    font-size: 2rem;
+.main-signup-container h1,
+.login-modal-content h1 {
+    font-size: 2rem ;
     margin-bottom: 30px;
     color: var(--orange-theme);
 }
@@ -741,9 +744,7 @@ footer {
     
 }
 
-#signup + .signup-button {
-    margin-top: 40px;
-    margin-bottom: 20px;
+.signup-button {
 }
 #signup div input,
 #login div input {
@@ -790,8 +791,10 @@ footer {
 }
 .signup-button {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .forgot-password-text, .sign-up-prompt-container p{
@@ -932,9 +935,17 @@ footer {
 
 
 }
+.tests-button-section div div button {
+    text-align: center;
+}
 
-.tests-button-section div p {
+.tests-button-section div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 14px;
+    
 
 }
 .user-section-title-template{
@@ -963,6 +974,12 @@ footer {
     row-gap: 20px;
 }
 
+.tests-button-section div button:hover {
+    background-color: var(--orange-darker-theme);
+    cursor: pointer;
+    
+}
+
 
 
 
@@ -978,12 +995,25 @@ footer {
 }
 
 
-.logout-section {
+.nav-section {
     justify-self: flex-end;
     align-self: center;
 
     margin-top: 20px;
 }
+
+#user-go-home:hover {
+    background-color: var(--orange-darker-theme);
+    cursor: pointer;
+}
+
+#user-logout:hover {
+    background-color: var(--darker-grey-theme);
+    cursor: pointer;
+}
+
+
+
 
 .user-logout-btn {
     background-color: var(--grey-theme);
@@ -993,8 +1023,10 @@ footer {
 
 /* MODAL */
 
+
 .modal {
     display: none;
+    z-index: 100;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
@@ -1021,15 +1053,10 @@ footer {
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content,
+.login-modal-content {
     position: fixed;
     top: 50%;
-    left: 50%;
-    margin-left: -150px;
-    margin-top: -150px;
-
-    height: 300px;
-    width: 300px;
     bottom: 0;
     background-color: #fefefe;
     
@@ -1037,6 +1064,28 @@ footer {
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
     animation-duration: 0.4s
+}
+
+.modal-content {
+    height: 300px;
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    
+}
+
+.login-modal-content {
+    height: 476px;
+    left: calc(50% - 200px);
+    top: calc(40% - 173.8px);
+    -webkit-animation-name: HomeSlideIn;
+    -webkit-animation-name: HomeSlideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
 }
 
 /* The Close Button */
@@ -1071,9 +1120,33 @@ footer {
 }
 
 /* Add Animation */
-@-webkit-keyframes slideIn {
+@-webkit-keyframes homeSlideIn {
     from {
         bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes homeSlideIn {
+    from {
+        bottom: -2145px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -2145px;
         opacity: 0
     }
 

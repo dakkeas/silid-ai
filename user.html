@@ -11,11 +11,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer type= "module" src="src/main.js"></script>
 </head>
 <body class="user-page">
     <header class="user-page-header">
         <div class="greet-user">
-            <h3>Welcome back, <span class="current-user-fname">Justine!</span></h3>
+            <h3>Welcome back, <span class="current-user-fname"></span></h3>
         </div>
 
         <div class="user-page-header-logo">
@@ -32,7 +33,7 @@
             </div>
             <div class="pfp-text">
                 
-                <h4>Fname Lname</h4>
+                <h4 id="pfp-name"></h4>
                 <p>Polytechnic University of the Philippines</p>
             </div>
 
@@ -47,16 +48,22 @@
             </div>
             <div class="tests-button-section">
                 <div>
-                    <p>Vark Questionnaire</p>
-                    <button class="user-page-button-template">Take Survey</button>
+                    <div>
+                        <p>Vark Questionnaire</p>
+                    </div>
+                    <button class="user-page-button-template" id="vark-questionnaire">Take Survey</button>
                 </div>
                 <div>
-                    <p>SILID AI Pretest</p>
-                    <button class="user-page-button-template">Take Test</button>
+                    <div>
+                        <p>SILID AI Pretest</p>
+                    </div>
+                    <button class="user-page-button-template" id="pretest">Take Test</button>
                 </div>
                 <div>
-                    <p>SILID AI Post Test</p>
-                    <button class="user-page-button-template">Take Test</button>
+                    <div>
+                        <p>SILID AI Post Test</p>
+                    </div>
+                    <button class="user-page-button-template" id="posttest">Test Button</button>
                 </div>
             </div>
         </div>
@@ -75,8 +82,9 @@
                    <p class="user-section-title-template">Progress</p>
                 </div>
             </div>
-            <div class="logout-section ">
-                <button class="user-logout-btn user-page-button-template">
+            <div class="nav-section">
+                <button class="user-page-button-template" id="user-go-home">Home</button>
+                <button class="user-logout-btn user-page-button-template" id="user-logout">
                     Log Out
                     
                 </button>
