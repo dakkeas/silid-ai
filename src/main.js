@@ -331,13 +331,11 @@ if (document.querySelector('.user-page')) {
         console.log(snapshot.val())
         if (snapshot.exists()) {
             varkSurvey.disabled = true;
-            console.log('exists!')
+            // console.log('exists!')
             varkSurvey.style.backgroundColor = 'grey';
             varkSurvey.style.cursor= 'default';
             varkSurvey.innerHTML = 'Completed'
-        } else {
-            console.log(' does not exists!')
-        }
+        } 
     }).then( () => {
         varkSurvey.onclick = () => {
             window.location = 'vark2.html'
@@ -353,9 +351,7 @@ if (document.querySelector('.user-page')) {
             preTest.style.backgroundColor = 'grey';
             preTest.style.cursor= 'default';
             preTest.innerHTML = 'Completed'
-        } else {
-            console.log(' does not exists!')
-        }
+        } 
     }).then( () => {
         preTest.onclick = () => {
             window.location = 'pretest.html'
@@ -370,14 +366,29 @@ if (document.querySelector('.user-page')) {
             console.log('exists!')
             postTest.style.backgroundColor = 'grey';
             postTest.style.cursor= 'default';
-            postTest    .innerHTML = 'Completed'
+            postTest.innerHTML = 'Completed'
         } else {
-            console.log(' does not exists!')
+
+            console.log(' no post test taken yet!!')
         }
     }).then( () => {
-        postTest.onclick = () => {
-            window.location = 'posttest.html'
-        } 
+        get(child(ref(db), `users/${userCreds.uid}/pretest`)).then(snapshot => {
+            if (snapshot.exists()){
+                postTest.onclick = () => {
+                    window.location = 'posttest.html'
+
+                } 
+                console.log('pretest taken, can take posttest!') 
+
+            } else {
+                postTest.style.backgroundColor = 'grey';
+                postTest.style.cursor= 'default';
+                postTest.innerHTML = 'Complete Pretest First!'
+                postTest.style.fontSize= '10px'
+                console.log('no pretest yet, take pretest first!')
+            }
+            
+        })
         
     })
 

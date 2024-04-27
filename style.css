@@ -997,6 +997,7 @@ footer {
 .user-page-button-template {
     height: 30px;
     min-width: 100px;
+    max-width: 100px;
     border-radius: 2px;
 
     font-weight: 300;
