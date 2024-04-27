@@ -14,7 +14,7 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    border: 1px solid rgb(183, 181, 181);
+    /* border: 1px solid rgb(183, 181, 181); */
     padding: 0px;
 
     font-family: "Rubik", sans-serif;
@@ -163,7 +163,9 @@ background: rgb(78, 198, 162);
 }
 
 
-.pretest {
+
+.pretest,
+.vark-questionnaire {
     background-color: #e2e7ef;
     padding: 30px;
     
@@ -709,6 +711,11 @@ footer {
 }
 
 
+.main-signup-container {
+    padding: 20px 50px 20px 50px;
+    
+}
+
 .main-login-container h1,
 .main-signup-container h1,
 .login-modal-content h1 {
@@ -718,10 +725,13 @@ footer {
 }
 
 
+.main-signup-container h1 {
+    margin-bottom: 20px;
+}
 
-.login {
+.login,
+.signup {
     height: 100vh;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -730,7 +740,6 @@ footer {
 
 #signup div,
 #login div{
-    
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -744,8 +753,7 @@ footer {
     
 }
 
-.signup-button {
-}
+
 #signup div input,
 #login div input {
     border: none;
@@ -791,8 +799,7 @@ footer {
 }
 .signup-button {
     display: flex;
-    margin-top: 20px;
-
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -935,8 +942,12 @@ footer {
 
 
 }
-.tests-button-section div div button {
+.tests-button-section div  button {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-theme);
 }
 
 .tests-button-section div div{
@@ -975,7 +986,7 @@ footer {
 }
 
 .tests-button-section div button:hover {
-    background-color: var(--orange-darker-theme);
+    background-color: var(--green-darker-theme);
     cursor: pointer;
     
 }
@@ -987,10 +998,12 @@ footer {
     height: 30px;
     min-width: 100px;
     border-radius: 2px;
+
     font-weight: 300;
     font-size: 14px;
     border: none;
     background-color: var(--orange-theme);
+    
     color: white;
 }
 
