@@ -391,7 +391,7 @@ if (document.querySelector('.signup-body')) {
             // let database_ref = database.ref();
 
             
-
+            // write data to database
             set(ref(db, 'users/' + user.uid + '/userInfo'), {
                 fname: signUpFName.value,
                 lname: signUpLName.value,
@@ -399,6 +399,7 @@ if (document.querySelector('.signup-body')) {
                 pw: signupConfirmPw.value, 
                 strand: strand.value,
                 last_login: Date.now()
+                    
             }).then(() => {
                 window.location = 'index.html'
             })
