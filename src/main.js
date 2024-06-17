@@ -396,7 +396,7 @@ if (document.querySelector('.signup-body')) {
                 fname: signUpFName.value,
                 lname: signUpLName.value,
                 email: signUpEmail.value,
-                pw: signupConfirmPw.value, 
+                password: signupConfirmPw.value, 
                 strand: strand.value,
                 last_login: Date.now()
                     
