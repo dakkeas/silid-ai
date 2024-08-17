@@ -78,7 +78,7 @@ if (document.querySelector('.user-page')) {
         } 
     }).then( () => {
         varkSurvey.onclick = () => {
-            window.location = 'vark2.html'
+            window.location = 'vark.html'
         } 
         
     })
